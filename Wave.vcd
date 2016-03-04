@@ -1,0 +1,68 @@
+$date
+     Mar 04, 2016       22:44:18
+$end
+
+$version
+ SystemC 2.3.1-Accellera --- Dec 14 2015 02:16:18
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire   16  aaaaa  ain [15:0]  $end
+$var wire   16  aaaab  bin [15:0]  $end
+$var wire   16  aaaac  sum [15:0]  $end
+$var wire    4  aaaad  operation [3:0]  $end
+$var wire    1  aaaae  owf-flag       $end
+$var wire    1  aaaaf  zero-flag       $end
+$var wire    1  aaaag  less-than-flag       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+b1000 aaaaa
+b111 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+0aaaaf
+0aaaag
+$end
+
+#100000
+b1111 aaaac
+b0 aaaad
+
+#200000
+b1 aaaac
+b1 aaaad
+
+#300000
+b1111 aaaac
+b10 aaaad
+
+#400000
+b0 aaaac
+b11 aaaad
+1aaaaf
+
+#500000
+b1111 aaaac
+b100 aaaad
+0aaaaf
+
+#600000
+b1111111111110111 aaaac
+b101 aaaad
+
+#700000
+b0 aaaac
+b110 aaaad
+1aaaaf
+
